@@ -11,23 +11,19 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "company": {
-      "model": "company",
-      "via": "deals"
-    },
-    "creator": {
+    "group_creator": {
       "model": "deal-participant"
     },
     "deal_participants": {
-      "collection": "deal-participant",
-      "via": "deal"
+      "via": "deal",
+      "collection": "deal-participant"
     },
-    "minimum_aggregated_requrement": {
+    "minimum_agg_threshold": {
       "type": "integer",
       "required": true,
       "min": 0
     },
-    "minimum_participation_requirement": {
+    "minimum_participation": {
       "type": "integer",
       "required": false,
       "min": 0
@@ -37,10 +33,14 @@
       "default": true,
       "required": false
     },
-    "GroupName": {
+    "group_name": {
       "type": "string",
       "unique": true,
       "required": true
+    },
+    "company": {
+      "model": "company",
+      "via": "group_deals"
     }
   }
 }
