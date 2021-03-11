@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deal_participants",
+  "info": {
+    "name": "DealParticipant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "participant": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "committed_participation": {
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    "deal": {
+      "model": "deal",
+      "via": "deal_participants"
+    }
+  }
+}

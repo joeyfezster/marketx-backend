@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/deal-participants",
+      "handler": "deal-participant.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deal-participants/count",
+      "handler": "deal-participant.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deal-participants/:id",
+      "handler": "deal-participant.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deal-participants",
+      "handler": "deal-participant.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/deal-participants/:id",
+      "handler": "deal-participant.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/deal-participants/:id",
+      "handler": "deal-participant.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
