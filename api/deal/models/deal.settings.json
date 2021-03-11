@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deals",
+  "info": {
+    "name": "GroupDeal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company": {
+      "model": "company",
+      "via": "deals"
+    },
+    "creator": {
+      "model": "deal-participant"
+    },
+    "deal_participants": {
+      "collection": "deal-participant",
+      "via": "deal"
+    },
+    "minimum_aggregated_requrement": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "minimum_participation_requirement": {
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    "is_open": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "GroupName": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

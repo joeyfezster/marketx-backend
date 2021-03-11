@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Company"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "deals": {
+      "via": "company",
+      "collection": "deal"
+    }
+  }
+}
