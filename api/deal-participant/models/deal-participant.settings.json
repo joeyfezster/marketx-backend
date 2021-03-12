@@ -21,8 +21,8 @@
       "min": 0
     },
     "deal": {
-      "model": "deal",
-      "via": "deal_participants"
+      "via": "deal_participants",
+      "model": "deal"
     }
   }
 }

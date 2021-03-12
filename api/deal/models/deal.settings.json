@@ -15,8 +15,8 @@
       "model": "deal-participant"
     },
     "deal_participants": {
-      "via": "deal",
-      "collection": "deal-participant"
+      "collection": "deal-participant",
+      "via": "deal"
     },
     "minimum_agg_threshold": {
       "type": "integer",
@@ -41,6 +41,15 @@
     "company": {
       "model": "company",
       "via": "group_deals"
+    },
+    "paticipants_can_invite_friends": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "deal_deadline": {
+      "type": "datetime",
+      "default": "2021-03-26T09:00:00.000Z"
     }
   }
 }
