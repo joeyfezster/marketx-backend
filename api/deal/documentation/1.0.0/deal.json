@@ -526,7 +526,8 @@
           },
           "group_creator": {
             "required": [
-              "id"
+              "id",
+              "participant"
             ],
             "properties": {
               "id": {
@@ -553,7 +554,8 @@
             "type": "array",
             "items": {
               "required": [
-                "id"
+                "id",
+                "participant"
               ],
               "properties": {
                 "id": {

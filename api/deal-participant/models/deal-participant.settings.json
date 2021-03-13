@@ -13,7 +13,8 @@
   "attributes": {
     "participant": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "required": true
     },
     "committed_participation": {
       "type": "integer",

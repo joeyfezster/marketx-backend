@@ -529,7 +529,8 @@
     "schemas": {
       "Deal-participant": {
         "required": [
-          "id"
+          "id",
+          "participant"
         ],
         "properties": {
           "id": {
@@ -634,6 +635,9 @@
         }
       },
       "NewDeal-participant": {
+        "required": [
+          "participant"
+        ],
         "properties": {
           "participant": {
             "type": "string"
